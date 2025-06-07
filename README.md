@@ -123,21 +123,6 @@ s-tui
 
 ## Scripts
 
-### Main Stress Testing Script
-
-The [`ultimate-stress.sh`](scripts/ultimate-stress.sh) script provides comprehensive system stress testing:
-
-```bash
-# Run with default settings (10 minutes)
-./scripts/ultimate-stress.sh
-
-# Custom duration (30 minutes)
-./scripts/ultimate-stress.sh 1800
-
-# With temperature monitoring
-./scripts/ultimate-stress.sh 600 --temp-limit 85
-```
-
 ### Additional Scripts
 
 - [`install-dependencies.sh`](scripts/install-dependencies.sh) - Automated tool installation
