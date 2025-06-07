@@ -6,7 +6,6 @@ A comprehensive collection of the most effective stress testing tools for Linux 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
-- [Quick Start](#quick-start)
 - [Tools by Component](#tools-by-component)
   - [GPU Testing](#-gpu-testing)
   - [CPU Testing](#-cpu-testing)
@@ -23,20 +22,6 @@ A comprehensive collection of the most effective stress testing tools for Linux 
 ## Overview
 
 This repository contains the ultimate collection of single-tool solutions for stress testing different hardware components. Instead of using multiple tools with varying quality, we've identified the **one best tool** for each category.
-
-## Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/ultimate-stress-testing.git
-cd ultimate-stress-testing
-
-# Install dependencies
-./install-dependencies.sh
-
-# Run comprehensive stress test
-./scripts/ultimate-stress.sh 600  # 10 minutes
-```
 
 ## Tools by Component
 
@@ -70,6 +55,9 @@ stress-ng --cpu $(nproc) --cpu-method all --metrics --timeout 600s
 
 # Maximum heat generation
 stress-ng --matrix $(nproc) --timeout 600s
+
+# Watch on separate terminal
+watch -n 1 'sensors | grep -E "Tctl|Tccd1|Tccd2"'
 ```
 
 ### 💾 Memory Testing
